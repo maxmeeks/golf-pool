@@ -1,6 +1,7 @@
 {
 	"name": "leaderboard",
 	"version": "0.1.0",
+	"type": "module",
 	"private": true,
 	"scripts": {
 		"dev": "vite",
@@ -12,7 +13,6 @@
 		"autoprefixer": "^10",
 		"luxon": "^3.5.0",
 		"pinia": "^3.0.1",
-		"postcss": "^8",
 		"tailwindcss": "^4.0.12",
 		"tailwindcss-pseudo-elements": "^2.0.0",
 		"vue": "^3.5.13"
