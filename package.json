@@ -3,26 +3,23 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build"
+		"dev": "vite",
+		"build": "vite build"
 	},
 	"dependencies": {
-		"@heroicons/vue": "^2.0.17",
-		"@tailwindcss/line-clamp": "^0.4.4",
-		"@tailwindcss/typography": "^0.5.9",
+		"@heroicons/vue": "^2.2.0",
 		"autoprefixer": "^10",
-		"luxon": "^3.3.0",
-		"pinia": "^2.0.33",
+		"luxon": "^3.5.0",
+		"pinia": "^3.0.1",
 		"postcss": "^8",
-		"tailwindcss": "^3.3.1",
+		"tailwindcss": "^4.0.12",
 		"tailwindcss-pseudo-elements": "^2.0.0",
-		"vue": "^3.2.13"
+		"vue": "^3.5.13"
 	},
 	"devDependencies": {
-		"@emailjs/browser": "^4.1.0",
-		"@vue/cli-service": "~5.0.0",
-		"node-sass": "^9.0.0",
-		"sass-loader": "^14.1.0",
+		"@emailjs/browser": "^4.4.1",
+		"@vitejs/plugin-vue": "^5.2.1",
+		"vite": "^6.2.1",
 		"vue-cli-plugin-tailwind": "~3.0.0"
 	},
 	"browserslist": [
@@ -32,6 +29,6 @@
 		"not ie 11"
 	],
 	"volta": {
-		"node": "19.9.0"
+		"node": "22.14.0"
 	}
 }
