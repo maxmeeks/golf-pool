@@ -31,6 +31,17 @@
 				<h2 class="text-xl font-medium text-tournament-900 pt-8">
 					Create your team
 				</h2>
+				<div class="flex flex-col space-y-2">
+					<label for="team" class="text-sm"
+						>Winning Score Prediction
+					</label>
+					<input
+						type="text"
+						name="winning_score"
+						class="appearance-none bg-white py-2 px-3 rounded"
+						required
+					/>
+				</div>
 				<div
 					v-for="(group, i) in useLeaderboardStore().tierGroups"
 					:key="i"
@@ -103,9 +114,27 @@ const state = reactive({
 });
 
 const sendEmail = () => {
+	if (!form.value) {
+		console.error("Form reference is not available");
+		return;
+	}
+
+	// Create a FormData object from the form element
+	const formData = new FormData(form.value);
+
+	// Convert FormData to a JSON object
+	const formObject = {};
+	formData.forEach((value, key) => {
+		formObject[key] = value;
+	});
+
+	// Log the JSON object
+	console.log("Form Data JSON:", JSON.stringify(formObject, null, 2));
+
+	// Proceed with sending the form via emailjs
 	emailjs
-		.sendForm("service_afijg3f", "template_v3cq6ow", form.value, {
-			publicKey: "",
+		.sendForm("service_afijg3f", "template_vdnkpcn", form.value, {
+			publicKey: "qNC0k_g9B47P_1MKd",
 		})
 		.then(
 			() => {
