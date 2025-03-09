@@ -5,17 +5,24 @@
 		</div>
 
 		<ul class="list-disc pl-6 py-6 space-y-2">
+			<li>$15 Tournament Entry Fee</li>
+			<li>Entries are limited to one team per person</li>
+			<li>Payouts made to 1st, 2nd & 3rd place</li>
+			<li>Pick one player from each tier to create your team</li>
 			<li>
-				$15 Tournament Entry. Payouts vary based on the amount of team
-				entries. Expectation is to payout 1st-3rd place
+				Each team’s top 4 player rankings contribute to your overall
+				team score
 			</li>
-			<li>Pick one player from each tier</li>
-			<li>Top 4 player rankings contribute to a team score</li>
-			<li>Team must have 4 players make the cut to be eligible to win</li>
-			<li>Lowest team score wins</li>
 			<li>
-				Ties are determined by closest tournament winning score
-				prediction
+				Your team must have 4 players make the cut to be eligible to
+				win. If you only have 3 players make the cut, your entire team
+				is considered cut for the remainder of the tournament
+			</li>
+			<li>Lowest total team score wins</li>
+			<li>
+				In the result of a tie at the end of contention, the winner will
+				be determined based on the winning score prediction submitted
+				prior to the start of the tournament
 			</li>
 		</ul>
 	</div>
