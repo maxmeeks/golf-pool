@@ -650,7 +650,7 @@ export const usePlayersListStore = defineStore("playersListStore", {
 			{ name: "Nick Dunlap" },
 			{ name: "Max McGreevy" },
 			{ name: "Matt Kuchar" },
-			{ name: "Lee Hodges" },
+			{ name: "Bud Cauley" },
 			{ name: "Gary Woodland" },
 			{ name: "Eric Cole" },
 			{ name: "Chris Kirk" },
