@@ -7,9 +7,9 @@
 			class="w-full"
 		>
 			<div class="flex flex-col space-y-4 text-tournament-200">
-				<h2 class="text-xl font-medium text-players-200">Signup</h2>
+				<h2 class="text-2xl font-medium text-players-200">Signup</h2>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-sm">First Name</label>
+					<label for="team" class="text-base">First Name</label>
 					<input
 						v-model="state.firstName"
 						type="text"
@@ -19,7 +19,7 @@
 					/>
 				</div>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-sm">Last Name</label>
+					<label for="team" class="text-base">Last Name</label>
 					<input
 						v-model="state.lastName"
 						type="text"
@@ -28,11 +28,11 @@
 						required
 					/>
 				</div>
-				<h2 class="text-xl font-medium text-players-200 pt-8">
+				<h2 class="text-2xl font-medium text-players-200 pt-8">
 					Create your team
 				</h2>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-sm"
+					<label for="team" class="text-base"
 						>Winning Score Prediction
 					</label>
 					<input
@@ -47,7 +47,7 @@
 					:key="i"
 					class="flex flex-col space-y-2"
 				>
-					<label class="text-sm">Tier {{ i + 1 }} Player</label>
+					<label class="text-base">Tier {{ i + 1 }} Player</label>
 					<div class="select-wrapper">
 						<select
 							class="appearance-none bg-white py-2 pl-3 pr-10 rounded w-full"
