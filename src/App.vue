@@ -1,13 +1,13 @@
 <template>
 	<div
-		class="bg-slate-100 font-nova min-h-screen flex flex-col justify-between"
+		class="bg-players-100 font-nova min-h-screen flex flex-col justify-between"
 	>
 		<main class="container max-w-3xl p-4 pb-10 mx-auto">
 			<div class="w-full flex justify-center mb-10">
 				<template v-if="viewsStore.event === 'players'">
 					<img
 						alt="The masters"
-						src="@/assets/players-championship-logo.jpg"
+						src="@/assets/players-championship-logo.png"
 						class="w-full max-w-[200px]"
 					/>
 				</template>

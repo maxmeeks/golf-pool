@@ -6,8 +6,8 @@
 			@submit.prevent="sendEmail"
 			class="w-full"
 		>
-			<div class="flex flex-col space-y-4">
-				<h2 class="text-xl font-medium text-tournament-900">Signup</h2>
+			<div class="flex flex-col space-y-4 text-tournament-200">
+				<h2 class="text-xl font-medium text-players-200">Signup</h2>
 				<div class="flex flex-col space-y-2">
 					<label for="team" class="text-sm">First Name</label>
 					<input
@@ -28,7 +28,7 @@
 						required
 					/>
 				</div>
-				<h2 class="text-xl font-medium text-tournament-900 pt-8">
+				<h2 class="text-xl font-medium text-players-200 pt-8">
 					Create your team
 				</h2>
 				<div class="flex flex-col space-y-2">
@@ -68,10 +68,10 @@
 				</div>
 			</div>
 
-			<div class="flex mt-12">
+			<div class="flex mt-12 justify-center">
 				<button
 					type="submit"
-					class="px-4 py-2 w-full bg-tournament-300 text-white rounded cursor-pointer hover:bg-tournament-300 hover:opacity-80 transition-all ease-in-out duration-300"
+					class="px-4 py-2 w-fit bg-tournament-300 text-white rounded cursor-pointer hover:bg-tournament-300 hover:opacity-80 transition-all ease-in-out duration-300"
 				>
 					Register Team
 				</button>
@@ -80,7 +80,7 @@
 		<div v-if="state.formSuccess" class="text-tournament-100">
 			{{ state.firstName }} {{ state.lastName }} your team has been
 			submitted. Teams won't be viewable till the tournament start date.
-			If you have not already please Venmo $20 to complete entry. Good
+			If you have not already please Venmo $15 to complete entry. Good
 			luck!
 		</div>
 		<div v-if="state.formError" class="text-tournament-300">
@@ -119,19 +119,6 @@ const sendEmail = () => {
 		return;
 	}
 
-	// Create a FormData object from the form element
-	const formData = new FormData(form.value);
-
-	// Convert FormData to a JSON object
-	const formObject = {};
-	formData.forEach((value, key) => {
-		formObject[key] = value;
-	});
-
-	// Log the JSON object
-	console.log("Form Data JSON:", JSON.stringify(formObject, null, 2));
-
-	// Proceed with sending the form via emailjs
 	emailjs
 		.sendForm("service_afijg3f", "template_vdnkpcn", form.value, {
 			publicKey: "qNC0k_g9B47P_1MKd",

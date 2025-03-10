@@ -193,6 +193,10 @@ module.exports = {
 				200: "#ffffff",
 				100: "#009B77",
 			},
+			players: {
+				100: "#003361",
+				200: "#CA7",
+			},
 		}),
 		columns: {
 			auto: "auto",
@@ -674,7 +678,7 @@ module.exports = {
 			max: "max-content",
 			fit: "fit-content",
 		}),
-	maxWidth: ({ theme }) => ({
+		maxWidth: ({ theme }) => ({
 			none: "none",
 			0: "0rem",
 			xs: "20rem",
