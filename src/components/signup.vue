@@ -104,7 +104,6 @@
 </template>
 
 <script setup>
-import { useLeaderboardStore } from "@/stores/leaderboard";
 import { useCookieStore } from "@/stores/cookies";
 import emailjs from "@emailjs/browser";
 import { onMounted, ref, reactive } from "vue";

@@ -380,6 +380,7 @@ module.exports = {
 				"monospace",
 			],
 			nova: ["Noto Serif", "serif"],
+			suise: ["SuisseIntl"],
 		},
 		fontSize: {
 			xs: ["0.75rem", { lineHeight: "1rem" }],

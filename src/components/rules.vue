@@ -4,7 +4,7 @@
 			<h2 class="text-2xl font-medium text-players-200">Rules</h2>
 		</div>
 
-		<ul class="list-disc pl-6 py-6 space-y-2 text-tournament-200 text-lg">
+		<ul class="list-disc pl-6 py-6 space-y-2 text-players-100 text-lg">
 			<li>$15 Tournament Entry Fee</li>
 			<li>Entries are limited to one team per person</li>
 			<li>Payouts made to 1st, 2nd & 3rd place</li>

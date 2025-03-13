@@ -6,17 +6,17 @@
 			id="searchPlayer"
 			type="text"
 			name="search"
-			class="appearance-none bg-white py-2 px-3 rounded w-full"
+			class="appearance-none bg-white py-2 px-3 rounded w-full border-slate-300 border-1"
 			placeholder="Search for player"
 		/>
 	</div>
 	<div class="space-y-2">
 		<div class="w-full px-3">
-			<h2 class="text-xl font-medium text-tournament-900">Leaderboard</h2>
+			<h2 class="text-xl font-medium text-players-100">Leaderboard</h2>
 		</div>
 
 		<div class="space-y-4">
-			<div>
+			<div class="border-r border-t border-slate-300">
 				<div
 					v-for="(player, index) in sortedLivePlayers"
 					:key="index"

@@ -4,7 +4,7 @@ import { useCookieStore } from "@/stores/cookies";
 
 export const useLeaderboardStore = defineStore("leaderboard", {
 	state: () => ({
-		eventKey: "",
+		eventKey: "401703500",
 		tierPlayersPerGroup: 18,
 		tierGroupAmount: 8,
 		date: "",
@@ -67,12 +67,15 @@ export const useLeaderboardStore = defineStore("leaderboard", {
 					`https://site.api.espn.com/apis/site/v2/sports/golf/leaderboard?event=${this.eventKey}`
 				);
 				const data = await response.json();
+
 				this.resetState();
 				this.date = data.events[0].date;
 				this.players = data.events[0].competitions[0].competitors;
 				this.tournament = data.events[0].tournament;
 				this.status = data.events[0].status;
-				this.createTeams();
+
+				await this.createTeams();
+
 				this.createLeaderboard();
 			} catch (error) {
 				console.log(error);
@@ -104,7 +107,9 @@ export const useLeaderboardStore = defineStore("leaderboard", {
 
 			this.leaderboard = leaderboard;
 		},
-		createTeams() {
+		async createTeams() {
+			await usePlayersListStore().fetchTeams();
+
 			const teams = usePlayersListStore().teams;
 			const pinnedTeam = useCookieStore().getCookie("pinnedTeam");
 
@@ -114,6 +119,7 @@ export const useLeaderboardStore = defineStore("leaderboard", {
 				newTeam.teamName = team.teamName;
 				newTeam.players = this.getPlayersList(team.players);
 				newTeam.totalScore = this.getTeamScore(team.players);
+				newTeam.winningScore = team.winningScore;
 
 				if (newTeam.totalScore === "CUT") {
 					this.cutTeams = [...this.cutTeams, newTeam];

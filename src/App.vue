@@ -1,13 +1,11 @@
 <template>
-	<div
-		class="bg-players-100 font-nova min-h-screen flex flex-col justify-between"
-	>
+	<div class="bg-white font-sans min-h-screen flex flex-col justify-between">
 		<main class="container max-w-3xl p-4 pb-10 mx-auto">
 			<div class="w-full flex justify-center mb-10">
 				<template v-if="viewsStore.event === 'players'">
 					<img
 						alt="The masters"
-						src="@/assets/players-championship-logo.png"
+						src="@/assets/players-logo-white.jpeg"
 						class="w-full max-w-[200px]"
 					/>
 				</template>
@@ -83,9 +81,6 @@ onBeforeMount(() => {
 onMounted(async () => {
 	if (viewsStore.activeView !== "signup") {
 		await leaderboard.fetchLeaderboard();
-		if (!leaderboard.status.type.completed) {
-			setInterval(leaderboard.fetchLeaderboard, 5000);
-		}
 	}
 });
 </script>
