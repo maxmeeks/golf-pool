@@ -56,7 +56,7 @@
 					>
 					<div class="select-wrapper">
 						<select
-							class="appearance-none bg-white py-2 pl-3 pr-10 rounded w-full border-masters-900 border-1"
+							class="appearance-none bg-white py-2 pl-3 pr-10 rounded w-full border-masters-900 border-1 text-masters-900"
 							:name="`tier_${i + 1}_player`"
 							required
 						>

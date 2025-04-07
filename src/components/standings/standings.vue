@@ -1,7 +1,7 @@
 <template>
 	<div class="mb-20 flex flex-col space-y-2">
 		<div class="flex items-center justify-between space-x-4 px-3">
-			<h2 class="text-xl font-medium text-players-100">Standings</h2>
+			<h2 class="text-xl font-medium text-gray-800">Standings</h2>
 			<div class="flex items-center space-x-3">
 				<div class="w-full flex items-center space-x-1">
 					<div class="font-semibold flex items-center">
@@ -28,7 +28,7 @@
 			<div
 				v-for="(team, index) in leaderboardStore.leaderboard"
 				:key="index"
-				class="w-full px-3 py-1 bg-white"
+				class="w-full bg-white cursor-pointer hover:bg-gray-200 transition-colors duration-200"
 				:class="{
 					'border-b border-slate-300':
 						index !== leaderboardStore.leaderboard.length - 1,

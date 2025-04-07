@@ -12,7 +12,7 @@
 	</div>
 	<div class="space-y-2">
 		<div class="w-full px-3">
-			<h2 class="text-xl font-medium text-players-100">Leaderboard</h2>
+			<h2 class="text-xl font-medium text-white">Leaderboard</h2>
 		</div>
 
 		<div class="space-y-4">

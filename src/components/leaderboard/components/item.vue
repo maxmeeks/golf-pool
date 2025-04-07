@@ -122,7 +122,7 @@
 					'text-tournament-100': model.statistics[0]?.value > 0,
 				},
 				{
-					'text-tournament-500':
+					'text-masters-900':
 						model.status?.displayValue === 'WD' ||
 						model.status?.displayValue === 'CUT' ||
 						model.statistics[0]?.value === 0,
