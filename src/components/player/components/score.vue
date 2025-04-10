@@ -13,21 +13,21 @@
 				<template v-else>
 					<star-outline-icon class="w-5 h-5" />
 				</template>
-				<h2 class="text-xl font-medium text-players-100">
+				<h2 class="text-xl font-medium text-gray-800">
 					{{ name }}
 					({{ winningScore }})
 				</h2>
 			</button>
 		</div>
 		<div class="flex items-center space-x-4">
-			<span class="text-xs leading-8 text-players-100">TEAM SCORE</span>
+			<span class="text-xs leading-8 text-gray-800">TEAM SCORE</span>
 			<div
 				class="text-xl font-semibold"
 				:class="[
 					{ 'text-tournament-300': score < 0 },
 					{ 'text-tournament-100': score > 0 },
 					{
-						'text-players-100':
+						'text-masters-900':
 							score === 0 || score === 'CUT' || score === 'WD',
 					},
 				]"
@@ -52,7 +52,7 @@ const props = defineProps({
 		default: "",
 	},
 	winningScore: {
-		type: Number,
+		type: String,
 		default: null,
 	},
 	score: {
