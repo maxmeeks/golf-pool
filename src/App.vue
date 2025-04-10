@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-white font-sans min-h-screen flex flex-col justify-between">
+	<div class="bg-white font-nova min-h-screen flex flex-col justify-between">
 		<main class="container max-w-3xl p-4 pb-10 mx-auto">
 			<div class="w-full flex justify-center mb-10">
 				<template v-if="viewsStore.event === 'players'">
