@@ -1,10 +1,10 @@
 <template>
 	<div class="prose">
 		<div class="w-full flex items-center justify-between space-x-4">
-			<h2 class="text-2xl font-medium text-masters-900">Rules</h2>
+			<h2 class="text-2xl font-medium text-pga-900">Rules</h2>
 		</div>
 
-		<ul class="list-disc pl-6 py-6 space-y-2 text-masters-900 text-lg">
+		<ul class="list-disc pl-6 py-6 space-y-2 text-pga-900 text-lg">
 			<li>$15 Tournament Entry Fee</li>
 			<li>Entries are limited to one team per person</li>
 			<li>Payouts made to 1st, 2nd & 3rd place</li>

@@ -19,7 +19,7 @@
 				<template v-if="viewsStore.event === 'pga'">
 					<img
 						alt="PGA Championship"
-						src="@/assets/pga-championship-logo.png"
+						src="@/assets/pga2025.png"
 						class="w-full max-w-[200px] mix-blend-multiply"
 					/>
 				</template>

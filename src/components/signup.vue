@@ -7,42 +7,42 @@
 			class="w-full"
 		>
 			<div class="flex flex-col space-y-4">
-				<h2 class="text-2xl font-medium text-masters-900">Signup</h2>
+				<h2 class="text-2xl font-medium text-pga-900">Signup</h2>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-base text-masters-900"
+					<label for="team" class="text-base text-pga-900"
 						>First Name</label
 					>
 					<input
 						v-model="state.firstName"
 						type="text"
 						name="first_name"
-						class="appearance-none bg-white py-2 px-3 rounded border-masters-900 border-1"
+						class="appearance-none bg-white py-2 px-3 rounded border-pga-900 border-1"
 						required
 					/>
 				</div>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-base text-masters-900"
+					<label for="team" class="text-base text-pga-900"
 						>Last Name</label
 					>
 					<input
 						v-model="state.lastName"
 						type="text"
 						name="last_name"
-						class="appearance-none bg-white py-2 px-3 rounded border-masters-900 border-1"
+						class="appearance-none bg-white py-2 px-3 rounded border-pga-900 border-1"
 						required
 					/>
 				</div>
-				<h2 class="text-2xl font-medium text-masters-900 pt-8">
+				<h2 class="text-2xl font-medium text-pga-900 pt-8">
 					Create your team
 				</h2>
 				<div class="flex flex-col space-y-2">
-					<label for="team" class="text-base text-masters-900"
+					<label for="team" class="text-base text-pga-900"
 						>Winning Score Prediction
 					</label>
 					<input
 						type="text"
 						name="winning_score"
-						class="appearance-none bg-white py-2 px-3 rounded border-masters-900 border-1"
+						class="appearance-none bg-white py-2 px-3 rounded border-pga-900 border-1"
 						required
 					/>
 				</div>
@@ -51,12 +51,12 @@
 					:key="i"
 					class="flex flex-col space-y-2"
 				>
-					<label class="text-base text-masters-900"
+					<label class="text-base text-pga-900"
 						>Tier {{ i + 1 }} Player</label
 					>
 					<div class="select-wrapper">
 						<select
-							class="appearance-none bg-white py-2 pl-3 pr-10 rounded w-full border-masters-900 border-1 text-masters-900"
+							class="appearance-none bg-white py-2 pl-3 pr-10 rounded w-full border-pga-900 border-1 text-pga-900"
 							:name="`tier_${i + 1}_player`"
 							required
 						>
