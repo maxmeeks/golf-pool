@@ -4,7 +4,7 @@ import { useCookieStore } from "@/stores/cookies";
 
 export const useLeaderboardStore = defineStore("leaderboard", {
 	state: () => ({
-		eventKey: "401703504",
+		eventKey: "401703511",
 		tierPlayersPerGroup: 19,
 		tierGroupAmount: 8,
 		date: "",
