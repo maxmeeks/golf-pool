@@ -7,13 +7,13 @@
 					<div class="font-semibold flex items-center">
 						<trophy-icon class="h-3 w-3 text-amber-400" />
 					</div>
-					<div class="flex-1 text-sm uppercase">$---</div>
+					<div class="flex-1 text-sm uppercase">$650</div>
 				</div>
 				<div class="w-full flex items-center space-x-1">
 					<div class="font-semibold flex items-center">
 						<trophy-icon class="h-3 w-3 text-grey-400" />
 					</div>
-					<div class="flex-1 text-sm uppercase">$---</div>
+					<div class="flex-1 text-sm uppercase">$220</div>
 				</div>
 				<div class="w-full flex items-center space-x-1">
 					<div class="font-semibold flex items-center">
