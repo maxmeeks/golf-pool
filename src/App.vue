@@ -26,7 +26,7 @@
 				<template v-if="viewsStore.event === 'us open'">
 					<img
 						alt="Us Open"
-						src="@/assets/us-open-logo.png"
+						src="@/assets/2025-us-open.png"
 						class="w-full max-w-[200px] mix-blend-multiply"
 					/>
 				</template>
