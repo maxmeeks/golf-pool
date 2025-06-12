@@ -165,7 +165,7 @@ export const usePlayersListStore = defineStore("playersListStore", {
 	actions: {
 		async fetchTeams() {
 			try {
-				const response = await fetch("/teams-data-pga.json");
+				const response = await fetch("/teams-data-usopen.json");
 				const data = await response.json();
 				this.teams = data.teams;
 			} catch (error) {
