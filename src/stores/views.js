@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 
 export const useViewsStore = defineStore("viewsStore", {
 	state: () => ({
-		event: "us open",
-		activeView: "standings",
+		event: "open championship",
+		activeView: "signup",
 	}),
 	actions: {
 		toggleView(value) {
