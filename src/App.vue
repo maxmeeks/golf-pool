@@ -56,6 +56,9 @@
 			<template v-if="viewsStore.activeView === 'rules'">
 				<rules />
 			</template>
+			<template v-if="viewsStore.activeView === 'ownership'">
+				<ownership />
+			</template>
 		</main>
 		<sticky-nav v-if="viewsStore.activeView !== 'signup'" />
 	</div>
@@ -64,6 +67,7 @@
 <script setup>
 import "@/assets/index.css";
 import { useLeaderboardStore } from "@/stores/leaderboard";
+import { useOwnershipStore } from "@/stores/ownership";
 import { useViewsStore } from "@/stores/views";
 import Standings from "@/components/standings/standings.vue";
 import Player from "@/components/player/player.vue";
@@ -71,9 +75,11 @@ import StickyNav from "@/components/sticky-nav.vue";
 import Leaderboard from "@/components/leaderboard/leaderboard.vue";
 import Rules from "@/components/rules.vue";
 import Signup from "@/components/signup.vue";
+import Ownership from "@/components/ownership/ownership.vue";
 import { onBeforeMount, onMounted } from "vue";
 
 const leaderboard = useLeaderboardStore();
+const ownershipStore = useOwnershipStore();
 const viewsStore = useViewsStore();
 
 onBeforeMount(() => {
@@ -83,6 +89,7 @@ onBeforeMount(() => {
 onMounted(async () => {
 	if (viewsStore.activeView !== "signup") {
 		await leaderboard.fetchLeaderboard();
+		await ownershipStore.generateOwnershipData();
 	}
 });
 </script>

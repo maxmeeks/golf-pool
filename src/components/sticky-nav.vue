@@ -23,6 +23,13 @@
 		>
 			<span>Rules</span>
 		</button>
+		<button
+			v-if="viewsStore.activeView !== 'ownership'"
+			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-open-900 cursor-pointer"
+			@click="viewsStore.toggleView('ownership')"
+		>
+			<span>Ownership</span>
+		</button>
 	</footer>
 </template>
 

@@ -159,7 +159,6 @@ export const usePlayersListStore = defineStore("playersListStore", {
 			{ name: "Jesper Sandborg" },
 			{ name: "Frazer Jones" },
 			{ name: "Curtis Knipes" },
-			{ name: "Matti Schmid" },
 		],
 	}),
 	actions: {

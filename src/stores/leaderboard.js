@@ -83,10 +83,11 @@ export const useLeaderboardStore = defineStore("leaderboard", {
 		},
 		createTiers() {
 			const tierPlayers = usePlayersListStore().tournamentPlayers;
+			const tempPlayers = JSON.parse(JSON.stringify(tierPlayers));
 
-			while (tierPlayers.length > 0) {
+			while (tempPlayers.length > 0) {
 				this.tierGroups.push(
-					tierPlayers.splice(0, this.tierPlayersPerGroup)
+					tempPlayers.splice(0, this.tierPlayersPerGroup)
 				);
 			}
 
