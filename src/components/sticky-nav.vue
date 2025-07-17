@@ -4,21 +4,21 @@
 	>
 		<button
 			v-if="viewsStore.activeView !== 'standings'"
-			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-pga-900 cursor-pointer"
+			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-open-900 cursor-pointer"
 			@click="viewsStore.toggleView('standings')"
 		>
 			<span>Team Standings</span>
 		</button>
 		<button
 			v-if="viewsStore.activeView !== 'leaderboard'"
-			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-pga-900 cursor-pointer"
+			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-open-900 cursor-pointer"
 			@click="viewsStore.toggleView('leaderboard')"
 		>
 			<span>Leaderboard</span>
 		</button>
 		<button
 			v-if="viewsStore.activeView !== 'rules'"
-			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-pga-900 cursor-pointer"
+			class="flex-1 px-4 py-3 text-white flex items-center justify-center bg-open-900 cursor-pointer"
 			@click="viewsStore.toggleView('rules')"
 		>
 			<span>Rules</span>

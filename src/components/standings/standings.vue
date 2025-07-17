@@ -1,8 +1,12 @@
 <template>
-	<div class="mb-20 flex flex-col space-y-2">
-		<div class="flex items-center justify-between space-x-4 px-3">
+	<div class="mb-20 flex flex-col">
+		<div
+			class="flex items-center justify-between space-x-4 px-3 py-2 bg-open-400"
+		>
 			<h2 class="text-xl font-medium text-gray-800">Standings</h2>
-			<div class="flex items-center space-x-3">
+			<div
+				class="flex items-center space-x-3 bg-white py-1 px-2 border-open-900 border"
+			>
 				<div class="w-full flex items-center space-x-1">
 					<div class="font-semibold flex items-center">
 						<trophy-icon class="h-3 w-3 text-amber-400" />

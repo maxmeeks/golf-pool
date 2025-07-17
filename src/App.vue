@@ -1,7 +1,9 @@
 <template>
-	<div class="bg-white font-nova min-h-screen flex flex-col justify-between">
+	<div
+		class="bg-[#565e73] font-nova min-h-screen flex flex-col justify-between"
+	>
 		<main class="container max-w-3xl p-4 pb-10 mx-auto">
-			<div class="w-full flex justify-center mb-10">
+			<div class="w-full flex justify-center lg:mb-10 mb-2">
 				<template v-if="viewsStore.event === 'players'">
 					<img
 						alt="The masters"
@@ -34,7 +36,7 @@
 					<img
 						alt="The Open Championship"
 						src="@/assets/open-championship-logo.png"
-						class="w-full max-w-[200px] mix-blend-multiply"
+						class="w-full max-w-[300px] mix-blend-multiply"
 					/>
 				</template>
 			</div>

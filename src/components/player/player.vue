@@ -3,7 +3,7 @@
 		<div
 			v-for="(team, index) in leaderboardStore.createdTeams"
 			:key="index"
-			class="w-full space-y-2"
+			class="w-full"
 		>
 			<score
 				:name="team.teamName"

@@ -1,5 +1,7 @@
 <template>
-	<div class="w-full flex items-center justify-between space-x-4 px-3">
+	<div
+		class="w-full flex items-center justify-between space-x-4 px-3 py-2 bg-open-400"
+	>
 		<div class="flex">
 			<button
 				class="flex items-center space-x-2"
