@@ -10,10 +10,38 @@
 				<li
 					v-for="player in tier"
 					:key="player.name"
-					class="flex justify-between"
+					class="flex justify-between items-center"
+					:class="{
+						'bg-green-100 border-l-4 border-green-500 pl-2':
+							player.isBestInTier,
+					}"
 				>
-					<span>{{ player.name }}</span>
-					<span>{{ player.ownership }}%</span>
+					<div class="flex items-center gap-2">
+						<span>{{ player.name }}</span>
+						<span
+							v-if="player.isBestInTier"
+							class="text-green-600 font-bold text-sm"
+							>⭐ BEST</span
+						>
+					</div>
+					<div class="flex items-center gap-2">
+						<span
+							v-if="player.score !== 999 && player.playerInfo"
+							class="text-sm text-gray-600"
+						>
+							{{
+								player.playerInfo.status?.displayValue ===
+									"CUT" ||
+								player.playerInfo.status?.displayValue === "WD"
+									? player.playerInfo.status.displayValue
+									: Number(player.score) === 0
+									? "E"
+									: (Number(player.score) > 0 ? "+" : "") +
+									  player.score
+							}}
+						</span>
+						<span>{{ player.ownership }}%</span>
+					</div>
 				</li>
 			</ul>
 		</div>

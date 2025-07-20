@@ -54,7 +54,7 @@ export const useOwnershipStore = defineStore("ownership", {
 			}
 
 			this.ownershipTiers = tiers.map((tier) => {
-				return tier.map((player) => {
+				const tierWithOwnership = tier.map((player) => {
 					const playerInfo = leaderboardStore.players.find(
 						(p) => p.athlete.displayName === player.name
 					);
@@ -67,8 +67,35 @@ export const useOwnershipStore = defineStore("ownership", {
 					return {
 						...player,
 						ownership: ownershipPercentage,
+						playerInfo: playerInfo,
+						score:
+							playerInfo?.statistics?.[0]?.value === "E"
+								? "E"
+								: playerInfo?.statistics?.[0]?.value !==
+								  undefined
+								? Number(playerInfo?.statistics?.[0]?.value)
+								: 999,
+						isBestInTier: false,
 					};
 				});
+
+				// Find the best player in this tier (lowest score)
+				const eligiblePlayers = tierWithOwnership.filter(
+					(p) =>
+						p.playerInfo &&
+						p.playerInfo.status?.displayValue !== "CUT" &&
+						p.playerInfo.status?.displayValue !== "WD" &&
+						p.score !== 999
+				);
+
+				if (eligiblePlayers.length > 0) {
+					const bestPlayer = eligiblePlayers.reduce((best, current) =>
+						current.score < best.score ? current : best
+					);
+					bestPlayer.isBestInTier = true;
+				}
+
+				return tierWithOwnership;
 			});
 		},
 		async generateOwnershipData() {
